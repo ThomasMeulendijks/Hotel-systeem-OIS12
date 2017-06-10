@@ -70,7 +70,7 @@ namespace HotelV1._2
                 }
                 else
                 {
-                    MessageBox.Show("Wromg date");
+                    MessageBox.Show("Wrong date");
                 }
             }
             else

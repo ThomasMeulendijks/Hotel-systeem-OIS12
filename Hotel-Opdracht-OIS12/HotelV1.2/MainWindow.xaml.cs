@@ -69,9 +69,12 @@ namespace HotelV1._2
                     newReservationWindow.StartDate, newReservationWindow.EndDate, 
                     newReservationWindow.Guests, newReservationWindow.Room);
                 Bookings.Add(newBooking);
+                dgBookings.ItemsSource = null;
                 dgBookings.Items.Clear();
                 dgBookings.ItemsSource = Bookings;
-                
+                //List<Guest> guests = Bookings.Room;
+                //CbbGuests.ItemsSource = guests;
+
             }
         }
     }

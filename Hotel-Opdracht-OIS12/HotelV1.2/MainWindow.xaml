@@ -8,18 +8,21 @@
         xmlns:wpf1="http://schemas.microsoft.com/netfx/2007/xaml/presentation"
         xmlns:wpf11="http://schemas.microsoft.com/xps/2005/06"
         mc:Ignorable="d"
-        Title="MainWindow" Height="455.341" Width="787.2">
+        Title="MainWindow" Height="455.341" Width="936.221">
     <Grid>
-        <DataGrid x:Name="dgBookings"  CanUserResizeColumns="True" CanUserAddRows="False" AutoGenerateColumns="False" HorizontalAlignment="Left" Height="278" Margin="0,148,-0.2,-0.4" VerticalAlignment="Top" Width="780">
+        <DataGrid x:Name="dgBookings"  CanUserResizeColumns="True" CanUserAddRows="False" AutoGenerateColumns="False" HorizontalAlignment="Left" Height="278" Margin="0,148,0,-2" VerticalAlignment="Top" Width="928">
             <DataGrid.Columns>
                 <DataGridTextColumn Binding="{Binding BookingName}" ClipboardContentBinding="{x:Null}" Header="Reserveerings naam" Width="120"/>
                 <DataGridTextColumn Binding="{Binding DateTimeStart}" ClipboardContentBinding="{x:Null}" Header="Begin Datum" Width="120"/>
                 <DataGridTextColumn Binding="{Binding DateTimeEnd}" ClipboardContentBinding="{x:Null}" Header="Eind datum" Width="120"/>
-                <DataGridComboBoxColumn ItemsSource="{Binding Guests}"  DisplayMemberPath="Name" Header="Gast" Width="100"/>
-                <!--<DataGridTextColumn Binding="{Binding Guests}" ClipboardContentBinding="{x:Null}" Header="Gast" Width="100"/> -->
                 <DataGridTextColumn Binding="{Binding Room}" ClipboardContentBinding="{x:Null}" Header="Kamer" Width="100"/>
+                <DataGridComboBoxColumn x:Name="CbbGuests" ItemsSource="{Binding DataContext.Guests, RelativeSource={RelativeSource AncestorType=local:MainWindow}}"  DisplayMemberPath="Name" Header="Gast" Width="100"/>
+                <!--<DataGridTextColumn Binding="{Binding Guests}" ClipboardContentBinding="{x:Null}" Header="Gast" Width="100"/> 
+                https://social.technet.microsoft.com/wiki/contents/articles/26347.wpf-combobox-binding-in-datagrid.aspx  READ-->
                 <DataGridCheckBoxColumn Binding="{x:Null}" ClipboardContentBinding="{x:Null}" Header="Diner" Width="100"/>
                 <DataGridCheckBoxColumn Binding="{x:Null}" ClipboardContentBinding="{x:Null}" Header="Ontbijt" Width="100"/>
+                <DataGridTextColumn Binding="{x:Null}" ClipboardContentBinding="{x:Null}" Header="Adress"/>
+
             </DataGrid.Columns>
         </DataGrid>
         <Button x:Name="btnNewReservation" Content="Niewe reservering" HorizontalAlignment="Left" Margin="668,10,0,0" VerticalAlignment="Top" Width="103" Height="40" Click="btnNewReservation_Click"/>
