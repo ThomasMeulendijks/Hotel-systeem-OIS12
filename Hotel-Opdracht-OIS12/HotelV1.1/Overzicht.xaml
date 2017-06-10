@@ -1,0 +1,22 @@
+﻿<Window x:Class="Hotel.Overzicht"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Hotel"
+        mc:Ignorable="d"
+        Title="Overzicht" Height="350" Width="550">
+    <Grid>
+        <DataGrid HorizontalAlignment="Left" Height="187" Margin="10,10,0,0" VerticalAlignment="Top" Width="400">
+            <DataGrid.Columns>
+                <DataGridTextColumn Binding="{x:Null}" ClipboardContentBinding="{x:Null}" Header="Naam" Width="100"/>
+                <DataGridTextColumn Binding="{x:Null}" ClipboardContentBinding="{x:Null}" FontWeight="Bold" Header="Kamer" Width="100"/>
+                <DataGridCheckBoxColumn Binding="{x:Null}" ClipboardContentBinding="{x:Null}" Header="Diner" Width="100"/>
+                <DataGridCheckBoxColumn Binding="{x:Null}" ClipboardContentBinding="{x:Null}" Header="Ontbijt" Width="100"/>
+            </DataGrid.Columns>
+        </DataGrid>
+        <Button x:Name="btnGotoReservering" Content="Reservering" HorizontalAlignment="Left" Margin="10,265,0,0" VerticalAlignment="Top" Width="75"/>
+        <Button x:Name="btnExport" Content="Export" HorizontalAlignment="Left" Margin="366,265,0,0" VerticalAlignment="Top" Width="75"/>
+
+    </Grid>
+</Window>

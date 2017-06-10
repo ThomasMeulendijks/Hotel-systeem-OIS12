@@ -1,0 +1,17 @@
+﻿<Window x:Class="HotelV1._2.CreateGuestWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:HotelV1._2"
+        mc:Ignorable="d"
+        Title="CreateGuestWindow" Height="174.943" Width="300">
+    <Grid Margin="0,0,-0.4,-0.8">
+        <Label Content="Naam" HorizontalAlignment="Left" Margin="13,10,0,0" VerticalAlignment="Top"/>
+        <TextBox x:Name="tbGuestName" HorizontalAlignment="Left" Height="23" Margin="164,13,0,0" TextWrapping="Wrap"  VerticalAlignment="Top" Width="120"/>
+        <TextBox x:Name="tbGuestAdres" HorizontalAlignment="Left" Height="23" Margin="164,53,0,0" TextWrapping="Wrap"  VerticalAlignment="Top" Width="120"/>
+        <Label Content="Adres:" HorizontalAlignment="Left" Margin="13,51,0,0" VerticalAlignment="Top"/>
+        <Button Content="Create" HorizontalAlignment="Left" Margin="164,107,0,0" VerticalAlignment="Top" Width="120" Height="29" Click="btnCreate"/>
+        <Button Content="Cancel" HorizontalAlignment="Left" Margin="13,107,0,0" VerticalAlignment="Top" Width="120" Height="29"/>
+    </Grid>
+</Window>

@@ -1,0 +1,27 @@
+﻿<Window x:Class="HotelV1._2.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:HotelV1._2"
+        xmlns:wpf="http://schemas.microsoft.com/netfx/2009/xaml/presentation"
+        xmlns:wpf1="http://schemas.microsoft.com/netfx/2007/xaml/presentation"
+        xmlns:wpf11="http://schemas.microsoft.com/xps/2005/06"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="455.341" Width="787.2">
+    <Grid>
+        <DataGrid x:Name="dgBookings"  CanUserResizeColumns="True" CanUserAddRows="False" AutoGenerateColumns="False" HorizontalAlignment="Left" Height="278" Margin="0,148,-0.2,-0.4" VerticalAlignment="Top" Width="780">
+            <DataGrid.Columns>
+                <DataGridTextColumn Binding="{Binding BookingName}" ClipboardContentBinding="{x:Null}" Header="Reserveerings naam" Width="120"/>
+                <DataGridTextColumn Binding="{Binding DateTimeStart}" ClipboardContentBinding="{x:Null}" Header="Begin Datum" Width="120"/>
+                <DataGridTextColumn Binding="{Binding DateTimeEnd}" ClipboardContentBinding="{x:Null}" Header="Eind datum" Width="120"/>
+                <DataGridComboBoxColumn ItemsSource="{Binding Guests}"  DisplayMemberPath="Name" Header="Gast" Width="100"/>
+                <!--<DataGridTextColumn Binding="{Binding Guests}" ClipboardContentBinding="{x:Null}" Header="Gast" Width="100"/> -->
+                <DataGridTextColumn Binding="{Binding Room}" ClipboardContentBinding="{x:Null}" Header="Kamer" Width="100"/>
+                <DataGridCheckBoxColumn Binding="{x:Null}" ClipboardContentBinding="{x:Null}" Header="Diner" Width="100"/>
+                <DataGridCheckBoxColumn Binding="{x:Null}" ClipboardContentBinding="{x:Null}" Header="Ontbijt" Width="100"/>
+            </DataGrid.Columns>
+        </DataGrid>
+        <Button x:Name="btnNewReservation" Content="Niewe reservering" HorizontalAlignment="Left" Margin="668,10,0,0" VerticalAlignment="Top" Width="103" Height="40" Click="btnNewReservation_Click"/>
+    </Grid>
+</Window>
